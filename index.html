@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Noctyra — Official website of a premium gaming organization."
+    />
+    <meta name="theme-color" content="#09090B" />
+
+    <title>Noctyra</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+
+    <!-- Stylesheets (load order matters) -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+
+  <body>
+    <!-- Loading Screen -->
+    <div class="loader" data-loader role="status" aria-live="polite" aria-label="Loading">
+      <div class="loader__spinner animate-spin" aria-hidden="true"></div>
+      <p class="loader__text">Noctyra</p>
+    </div>
+
+    <div class="page">
+      <!-- Skip Navigation -->
+      <a class="skip-link" href="#main-content">Skip to main content</a>
+
+      <!-- Header -->
+      <header class="header header--hero" data-header role="banner">
+        <div class="container header__inner">
+          <a class="header__logo" href="index.html" aria-label="Noctyra — Home">
+            <img src="assets/logo/logo.png" alt="Noctyra logo" width="32" height="32" />
+            <span>Noctyra</span>
+          </a>
+
+          <nav class="nav" aria-label="Main navigation">
+            <ul class="nav__list" role="list">
+              <li><a class="nav__link" href="#home">Home</a></li>
+              <li><a class="nav__link" href="#about">About</a></li>
+              <li><a class="nav__link" href="#features">Features</a></li>
+              <li><a class="nav__link" href="#faq">FAQ</a></li>
+            </ul>
+
+            <a href="https://discord.gg/U5fAqrXTHS" class="btn btn--primary header__cta">
+              Join Discord
+            </a>
+          </nav>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            data-nav-toggle
+            aria-expanded="false"
+            aria-controls="mobile-nav"
+            aria-label="Toggle navigation menu"
+          >
+            <span class="nav-toggle__icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Mobile Navigation -->
+      <nav
+        class="nav-mobile"
+        id="mobile-nav"
+        data-nav-mobile
+        aria-label="Mobile navigation"
+        aria-hidden="true"
+      >
+        <ul class="nav-mobile__list" role="list">
+          <li><a class="nav-mobile__link" href="#home">Home</a></li>
+          <li><a class="nav-mobile__link" href="#about">About</a></li>
+          <li><a class="nav-mobile__link" href="#features">Features</a></li>
+          <li><a class="nav-mobile__link" href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="page__main" id="main-content" role="main">
+        <section class="hero" id="home" aria-labelledby="hero-heading">
+          <!-- Background -->
+          <div class="hero__bg" aria-hidden="true">
+            <div class="hero__glow"></div>
+            <div class="hero__particles">
+              <span class="hero__particle"></span>
+              <span class="hero__particle"></span>
+              <span class="hero__particle"></span>
+              <span class="hero__particle"></span>
+              <span class="hero__particle"></span>
+              <span class="hero__particle"></span>
+              <span class="hero__particle"></span>
+              <span class="hero__particle"></span>
+              <span class="hero__particle"></span>
+              <span class="hero__particle"></span>
+              <span class="hero__particle"></span>
+              <span class="hero__particle"></span>
+            </div>
+          </div>
+
+          <div class="container hero__inner">
+            <!-- Left — Copy -->
+            <div class="hero__content">
+              <span class="badge badge--primary hero__badge">Premium Community</span>
+              <h1 class="hero__title" id="hero-heading">Noctyra Awaits</h1>
+              <p class="hero__subtitle">
+                A community built for gamers, anime fans, and people looking for an active home.
+              </p>
+              <div class="hero__actions">
+                <a href="https://discord.gg/U5fAqrXTHS" class="btn btn--primary hero__btn">Join Discord</a>
+                <a href="#explore" class="btn btn--secondary hero__btn">Explore</a>
+              </div>
+            </div>
+
+            <!-- Right — Logo Placeholder -->
+            <div class="hero__visual">
+              <div class="hero__logo-wrap">
+                <div class="hero__logo-glow" aria-hidden="true"></div>
+                <div class="hero__logo-ring" aria-hidden="true"></div>
+                <div class="hero__logo-slot">
+                  <img
+                    src="assets/logo/logo.png"
+                    alt="Noctyra Logo"
+                    class="hero__logo-image"
+                    width="320"
+                    height="320"
+                  />
+              </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="about reveal" id="about">
+          <div class="container about__card">
+            <span class="section-tag">ABOUT</span>
+              <h2 class="section-title">More Than Just a Discord Server.</h2>
+              <p class="section-text">
+                Noctyra is a premium community where gamers, anime fans, and creators come together.
+                We focus on quality, events, friendships, and building a place people are proud to be part of.
+              </p>
+            </div>
+        </section>
+
+        <!------- Features ------->
+
+        <section class="features reveal" id="features">
+          <div class="container">
+            <span class="section-tag">FEATURES</span>
+              <h2 class="section-title">
+                Why Choose Noctyra?
+              </h2>
+          <div class="features__grid">
+          <div class="feature__card">
+              <span class="feature__icon" aria-hidden="true">🎮</span>
+              <h3>Gaming</h3>
+              <p>Events, PvP, and an active Blox Fruits community.</p>
+          </div>
+          <div class="feature__card">
+            <span class="feature__icon" aria-hidden="true">🌸</span>
+            <h3>Anime</h3>
+            <p>Discuss, recommend, and enjoy anime together.</p>
+          </div>
+          <div class="feature__card">
+            <span class="feature__icon" aria-hidden="true">🏆</span>
+            <h3>Giveaways</h3>
+            <p>Premium rewards, events, and exclusive prizes.</p>
+          </div>
+          <div class="feature__card">
+            <span class="feature__icon" aria-hidden="true">🛡️</span>
+            <h3>Moderation</h3>
+            <p>Friendly staff with a safe and welcoming environment.</p>
+          </div>
+          <div class="feature__card">
+            <span class="feature__icon" aria-hidden="true">💜</span>
+            <h3>Community</h3>
+            <p>Meet amazing people and build lasting friendships.</p>
+          </div>
+          <div class="feature__card">
+            <span class="feature__icon" aria-hidden="true">⚡</span>
+            <h3>Always Growing</h3>
+            <p>New updates, ideas, and improvements every week.</p>
+          </div>
+          </div>
+          </div>
+        </section>
+        <section class="faq reveal" id="faq">
+          <div class="container">
+            <span class="section-tag">FAQ</span>
+            <h2 class="section-title">
+              Frequently Asked Questions
+             </h2>
+          <div class="faq__container">
+          <div class="faq__item">
+              <button class="faq__question" id="faq-question-1" aria-expanded="false" aria-controls="faq-answer-1">
+            <span>What is Noctyra?</span>
+            <span class="faq__icon" aria-hidden="true">+</span>
+              </button>
+          <div class="faq__answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1">
+            <p>
+              Noctyra is a premium Discord community built for gamers, anime fans, and people looking for an active and welcoming place.
+            </p>
+          </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question" id="faq-question-2" aria-expanded="false" aria-controls="faq-answer-2">
+            <span>Is Noctyra free to join?</span>
+            <span class="faq__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq__answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2">
+              <p>
+                Yes. Anyone can join the community and participate in events, discussions, and activities.
+              </p>
+          </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question" id="faq-question-3" aria-expanded="false" aria-controls="faq-answer-3">
+            <span>Who can join Noctyra?</span>
+            <span class="faq__icon" aria-hidden="true">+</span>
+            </button>
+          <div class="faq__answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3">
+            <p>
+             Whether you're into gaming, anime, or simply want an active community, you're welcome in Noctyra.
+            </p>
+          </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question" id="faq-question-4" aria-expanded="false" aria-controls="faq-answer-4">
+            <span>How can I report a problem?</span>
+            <span class="faq__icon" aria-hidden="true">+</span>
+            </button>
+          <div class="faq__answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4">
+            <p>
+              Contact a staff member through Discord and we'll help you as quickly as possible.
+            </p>
+          </div>
+          </div>
+          </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container footer__inner">
+        <div class="footer__brand">
+          <img src="assets/logo/logo.png" alt="Noctyra Logo" width="70" height="70">
+          <h3>Noctyra</h3>
+          <p>Built for gamers, anime fans and community.</p>
+        </div>
+        <div class="footer__links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#features">Features</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer__copyright">
+          © <span data-year>2026</span> Noctyra. All rights reserved.
+        </div>
+        </div>
+      </footer>
+
+    <!-- Scripts (ES6 modules) -->
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
