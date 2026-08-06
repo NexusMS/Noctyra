@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Noctyra — Official website of a premium gaming organization."
+    />
+    <meta name="theme-color" content="#09090B" />
+
+    <title>Noctyra</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+
+    <!-- Stylesheets (load order matters) -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/games.css">
+  </head>
+
+  <body>
+    <!-- Loading Screen -->
+    <div class="loader" data-loader role="status" aria-live="polite" aria-label="Loading">
+      <div class="loader__spinner animate-spin" aria-hidden="true"></div>
+      <p class="loader__text">Noctyra</p>
+    </div>
+
+    <div class="page">
+      <!-- Skip Navigation -->
+      <a class="skip-link" href="#main-content">Skip to main content</a>
+
+      <!-- Header -->
+      <header class="header header--hero" data-header role="banner">
+        <div class="container header__inner">
+          <a class="header__logo" href="index.html" aria-label="Noctyra — Home">
+            <img src="assets/logo/logo.png" alt="Noctyra logo" width="32" height="32" />
+            <span>Noctyra</span>
+          </a>
+
+          <nav class="nav" aria-label="Main navigation">
+            <ul class="nav__list" role="list">
+              <li><a class="nav__link" href="#home">Home</a></li>
+              <li><a class="nav__link" href="#about">About</a></li>
+              <li><a class="nav__link" href="#features">Features</a></li>
+              <li><a class="nav__link" href="#faq">FAQ</a></li>
+            </ul>
+
+            <a href="https://discord.gg/U5fAqrXTHS" class="btn btn--primary header__cta">
+              Join Discord
+            </a>
+          </nav>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            data-nav-toggle
+            aria-expanded="false"
+            aria-controls="mobile-nav"
+            aria-label="Toggle navigation menu"
+          >
+            <span class="nav-toggle__icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Mobile Navigation -->
+      <nav
+        class="nav-mobile"
+        id="mobile-nav"
+        data-nav-mobile
+        aria-label="Mobile navigation"
+        aria-hidden="true"
+      >
+        <ul class="nav-mobile__list" role="list">
+          <li><a class="nav-mobile__link" href="#home">Home</a></li>
+          <li><a class="nav-mobile__link" href="#about">About</a></li>
+          <li><a class="nav-mobile__link" href="#features">Features</a></li>
+          <li><a class="nav-mobile__link" href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+    <!-- Main Content -->
+    <main class="page__main" id="main-content" role="main">
+        <section class="games-hero">
+            <div class="container">
+            <span class="badge badge--primary">Games</span>
+                <h1 class="games-title">
+                    Games We Play
+                </h1>
+                <p class="games-subtitle">
+                    Explore the worlds our community plays, competes, and grows in together.
+                </p>
+            </div>
+        </section>
+        <section class="featured-platform">
+            <div class="container">
+            <div class="platform-card">
+            <div class="platform-content">
+                <span class="badge badge--primary">Main Platform</span>
+                    <h2>Roblox</h2>
+                    <p>
+                        Noctyra is built around the Roblox community. Whether you enjoy PvP, grinding, trading, or casual games, you'll always find people to play with.
+                    </p>
+                    <a 
+                      href="https://discord.gg/U5fAqrXTHS"
+                      class="btn btn--primary">
+                      Join Community
+                    </a>
+            </div>
+            <div class="platform-image">
+                    <img src="assets/images/roblox.png" alt="Roblox">
+            </div>
+            </div>
+            </div>
+        </section>
+        <section class="why-noctyra">
+            <div class="container">
+
+            <div class="section-heading">
+                <span class="badge badge--primary">Why Noctyra?</span>
+                <h2>More Than Just A Gaming Server</h2>
+                <p>
+                    Noctyra is a place to play, compete, and make friends across multiple games.
+                </p>
+            </div>
+
+            <div class="why-grid">
+
+            <div class="why-card">
+                <h3>🎮 Active Community</h3>
+                <p>
+                    Meet players from around the world and always find someone to play with.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <h3>🏆 Events & Giveaways</h3>
+                <p>Join tournaments, community events, and exciting giveaways.</p>
+            </div>
+
+            <div class="why-card">
+                <h3>🤝 Friendly Environment</h3>
+                <p>A welcoming place for both casual players and competitive gamers.</p>
+            </div>
+
+            <div class="why-card">
+                <h3>🌍 Multiple Games</h3>
+                <p>Roblox, Minecraft, Valorant, Among Us, and many more.</p>
+            </div>
+            </div>
+            </div>
+        </section>
+        <section class="games-cta">
+            <div class="container">
+
+            <div class="cta-box">
+                <span class="badge badge--primary">Join Us</span>
+                    <h2>Ready to Join Noctyra?</h2>
+                    <p>
+                    Whether you're grinding in Roblox, exploring Minecraft, or just looking for an active gaming community, Noctyra is waiting for you.
+                    </p>
+
+                <a
+                  href="https://discord.gg/U5fAqrXTHS"
+                  class="btn btn--primary"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Join Discord
+                </a>
+
+            </div>
+            </div>
+        </section>
+        <section class="games-list">
+            <div class="container">
+            <div class="section-heading">
+              <span class="badge badge--primary">Community Games</span>
+              <h2>What We Play</h2>
+              <p>
+                Our members enjoy many different games, but these are the most popular.
+              </p>
+            </div>
+            <div class="games-grid">
+            <div class="game-card">
+            <div class="game-icon">🎮</div>
+              <h3>Roblox</h3>
+              <p>Our biggest community with events, grinding, trading and PvP.</p>
+            </div>
+            <div class="game-card">
+              <div class="game-icon">⛏️</div>
+                <h3>Minecraft</h3>
+                <p>Survival, SMP adventures and building together.</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-icon">🏴‍☠️</div>
+                <h3>Blox Fruits</h3>
+                <p>Raids, trading, grinding and PvP sessions.</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-icon">🎯</div>
+                <h3>Valorant</h3>
+                <p>Ranked matches and casual games with friends.</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-icon">👨‍🚀</div>
+                <h3>Among Us</h3>
+                <p>Fun community game nights full of chaos.</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-icon">✨</div>
+                <h3>More Soon</h3>
+                <p>We're always expanding into new games.</p>
+            </div>
+        </div>
+        </div>
+      </section>
+    </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container footer__inner">
+        <div class="footer__brand">
+          <img src="assets/logo/logo.png" alt="Noctyra Logo" width="70" height="70">
+          <h3>Noctyra</h3>
+          <p>Built for gamers, anime fans and community.</p>
+        </div>
+        <div class="footer__links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#features">Features</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer__copyright">
+          © <span data-year>2026</span> Noctyra. All rights reserved.
+        </div>
+        </div>
+      </footer>
+
+    <!-- Scripts (ES6 modules) -->
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

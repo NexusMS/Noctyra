@@ -1,0 +1,230 @@
+/* ==================================================
+   GAMES HERO
+================================================== */
+
+.games-hero{
+    padding:140px 0 90px;
+    text-align:center;
+}
+
+.games-title{
+    font-size:clamp(3rem,6vw,4.8rem);
+    font-weight:800;
+    margin:18px 0;
+    line-height:1.1;
+    background:linear-gradient(180deg,#ffffff,#9b5cff);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+.games-subtitle{
+    max-width:720px;
+    margin:auto;
+    color:#b8b8b8;
+    line-height:1.8;
+    font-size:1.08rem;
+}
+
+
+/* ==================================================
+   FEATURED PLATFORM
+================================================== */
+
+.featured-platform{
+    padding:80px 0;
+}
+
+.platform-card{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    align-items:center;
+    gap:60px;
+
+    padding:60px;
+
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+
+    backdrop-filter:blur(16px);
+
+    transition:.35s ease;
+}
+
+.platform-card:hover{
+    transform:translateY(-8px);
+    border-color:#8b5cf6;
+    box-shadow:0 25px 60px rgba(139,92,246,.18);
+}
+
+.platform-content h2{
+    font-size:2.6rem;
+    margin:20px 0;
+}
+
+.platform-content p{
+    color:#bcbcbc;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.platform-image{
+    display:flex;
+    justify-content:center;
+}
+
+.platform-image img{
+    width:100%;
+    max-width:420px;
+
+    transition:.4s;
+}
+
+.platform-card:hover img{
+    transform:scale(1.04) rotate(-2deg);
+}
+
+
+/* ==================================================
+   GAMES GRID
+================================================== */
+
+.games-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+    gap:30px;
+
+    padding:90px 0;
+}
+
+.game-card{
+    padding:35px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+}
+
+.game-card:hover{
+    transform:translateY(-10px);
+    border-color:#8b5cf6;
+    box-shadow:0 20px 45px rgba(139,92,246,.18);
+}
+
+.game-icon{
+    font-size:3rem;
+    margin-bottom:20px;
+    transition:.35s;
+}
+
+.game-card:hover .game-icon{
+    transform:scale(1.12);
+}
+
+.game-card h3{
+    font-size:1.5rem;
+    margin-bottom:15px;
+}
+
+.game-card p{
+    color:#bdbdbd;
+    line-height:1.8;
+}
+
+
+/* ==================================================
+   WHY NOCTYRA
+================================================== */
+
+.why-noctyra{
+    padding:90px 0;
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-heading h2{
+    margin:18px 0;
+    font-size:2.6rem;
+}
+
+.section-heading p{
+    max-width:650px;
+    margin:auto;
+    color:#bdbdbd;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.why-card{
+    padding:30px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+}
+
+.why-card:hover{
+    transform:translateY(-8px);
+    border-color:#8b5cf6;
+    box-shadow:0 20px 45px rgba(139,92,246,.18);
+}
+
+.why-card h3{
+    margin-bottom:15px;
+}
+
+.why-card p{
+    color:#bdbdbd;
+    line-height:1.8;
+}
+
+
+/* ==================================================
+   CTA
+================================================== */
+
+.games-cta{
+    padding:90px 0 120px;
+}
+
+.cta-box{
+    text-align:center;
+
+    padding:70px 40px;
+
+    border-radius:26px;
+
+    background:linear-gradient(
+        135deg,
+        rgba(124,58,237,.18),
+        rgba(255,255,255,.03)
+    );
+
+    border:1px solid rgba(124,58,237,.25);
+}
+
+.cta-box h2{
+    margin:22px 0;
+    font-size:2.8rem;
+}
+
+.cta-box p{
+    max-width:700px;
+    margin:0 auto 35px;
+    color:#bcbcbc;
+    line-height:1.8;
+}
