@@ -1,0 +1,287 @@
+/* ==========================================================================
+   Noctyra — Community Page Styles
+   Styles for community.html.
+   Reuses shared classes from components.css / home.css wherever possible
+   (badge, btn, container, section-tag, section-title, section-text,
+   about / about__card, features__grid / feature__card, reveal).
+   Only page-specific classes are defined below.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Community Hero
+   -------------------------------------------------------------------------- */
+.community-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 160px 0 110px;
+  text-align: center;
+  background-color: var(--color-bg);
+}
+
+.community-hero__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.community-hero__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(70vw, 40rem);
+  height: min(70vw, 40rem);
+  background: radial-gradient(
+    circle,
+    rgba(124, 58, 237, 0.2) 0%,
+    rgba(124, 58, 237, 0.07) 40%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.85;
+}
+
+.community-hero__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.community-hero__inner .badge {
+  margin-bottom: 18px;
+}
+
+.community-title {
+  font-size: clamp(3rem, 6vw, 4.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 18px 0;
+  background: linear-gradient(180deg, #ffffff, #9b5cff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 25px rgba(124, 58, 238, 0.15);
+}
+
+.community-subtitle {
+  max-width: 640px;
+  margin: 0 auto 36px;
+  color: #b8b8b8;
+  line-height: 1.8;
+  font-size: 1.08rem;
+}
+
+/* --------------------------------------------------------------------------
+   Who We Are
+   -------------------------------------------------------------------------- */
+.who-section {
+  padding: 100px 0;
+}
+
+.who-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+@media (min-width: 900px) {
+  .who-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 70px;
+  }
+}
+
+.who-content .section-tag,
+.who-content .section-title {
+  display: block;
+}
+
+.who-text {
+  margin: 0;
+  text-align: left;
+  max-width: none;
+}
+
+.who-content .section-title {
+  text-align: left;
+}
+
+/* Illustration / image placeholder */
+.who-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+}
+
+.who-visual__glow {
+  position: absolute;
+  inset: 10%;
+  background: radial-gradient(
+    circle,
+    rgba(124, 58, 237, 0.3) 0%,
+    rgba(124, 58, 237, 0.08) 45%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(4px);
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.who-visual__frame {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 1 / 1;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 0 40px rgba(139, 92, 246, 0.12);
+  transition: transform 0.45s ease, border-color 0.4s ease, box-shadow 0.45s ease;
+}
+
+.who-visual:hover .who-visual__frame {
+  transform: translateY(-6px);
+  border-color: rgba(155, 92, 255, 0.4);
+  box-shadow: 0 20px 50px rgba(139, 92, 246, 0.22);
+}
+
+.who-visual__logo {
+  width: 55%;
+  height: 55%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  box-shadow:
+    0 0 30px rgba(155, 92, 255, 0.35),
+    0 0 60px rgba(155, 92, 255, 0.15);
+  filter: drop-shadow(0 0 20px rgba(155, 92, 255, 0.35));
+}
+
+/* --------------------------------------------------------------------------
+   Shared centered section intro (used by Values + What You'll Find)
+   -------------------------------------------------------------------------- */
+.section-intro {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 60px;
+}
+
+.section-intro .section-title {
+  margin: 18px 0;
+}
+
+.section-intro .section-text {
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Our Values
+   -------------------------------------------------------------------------- */
+.values-section {
+  padding: 100px 0;
+}
+
+/* --------------------------------------------------------------------------
+   What You'll Find
+   -------------------------------------------------------------------------- */
+.find-section {
+  padding: 100px 0;
+}
+
+/* --------------------------------------------------------------------------
+   Why Join Noctyra — large premium glass section
+   -------------------------------------------------------------------------- */
+.why-join {
+  padding: 100px 0;
+}
+
+.why-join__card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.why-join__btn {
+  margin-top: 30px;
+}
+
+/* --------------------------------------------------------------------------
+   Final CTA
+   -------------------------------------------------------------------------- */
+.community-cta {
+  padding: 90px 0 120px;
+}
+
+.cta-box {
+  text-align: center;
+  padding: 70px 40px;
+  border-radius: 26px;
+  background: linear-gradient(
+    135deg,
+    rgba(124, 58, 237, 0.18),
+    rgba(255, 255, 255, 0.03)
+  );
+  border: 1px solid rgba(124, 58, 237, 0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.cta-box:hover {
+  transform: translateY(-6px);
+  border-color: rgba(155, 92, 255, 0.4);
+  box-shadow: 0 25px 60px rgba(139, 92, 246, 0.18);
+}
+
+.cta-box h2 {
+  margin: 22px 0;
+  font-size: 2.8rem;
+  color: #fff;
+}
+
+.cta-box p {
+  max-width: 700px;
+  margin: 0 auto 35px;
+  color: #bcbcbc;
+  line-height: 1.8;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive tweaks
+   -------------------------------------------------------------------------- */
+@media (max-width: 600px) {
+  .community-hero {
+    padding: 140px 0 80px;
+  }
+
+  .who-content .section-title,
+  .who-text {
+    text-align: center;
+  }
+
+  .who-content {
+    text-align: center;
+  }
+
+  .who-visual {
+    order: -1;
+  }
+
+  .cta-box {
+    padding: 50px 24px;
+  }
+
+  .cta-box h2 {
+    font-size: 2.2rem;
+  }
+}
