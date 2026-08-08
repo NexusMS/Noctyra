@@ -1,0 +1,419 @@
+/* ==========================================================================
+   Noctyra — Rules Page Styles
+   Styles for rules.html.
+   Reuses shared classes from components.css / home.css wherever possible
+   (badge, btn, container, section-tag, section-title, section-text,
+   about / about__card, reveal, cta-box pattern).
+   Only page-specific classes are defined below.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Rules Hero
+   -------------------------------------------------------------------------- */
+.rules-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 160px 0 110px;
+  text-align: center;
+  background-color: var(--color-bg);
+}
+
+.rules-hero__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.rules-hero__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(70vw, 40rem);
+  height: min(70vw, 40rem);
+  background: radial-gradient(
+    circle,
+    rgba(124, 58, 237, 0.2) 0%,
+    rgba(124, 58, 237, 0.07) 40%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.85;
+}
+
+.rules-hero__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rules-hero__inner .badge {
+  margin-bottom: 18px;
+}
+
+.rules-title {
+  font-size: clamp(3rem, 6vw, 4.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 18px 0;
+  background: linear-gradient(180deg, #ffffff, #9b5cff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 25px rgba(124, 58, 238, 0.15);
+}
+
+.rules-subtitle {
+  max-width: 640px;
+  margin: 0 auto;
+  color: #b8b8b8;
+  line-height: 1.8;
+  font-size: 1.08rem;
+}
+
+/* --------------------------------------------------------------------------
+   Introduction
+   -------------------------------------------------------------------------- */
+.rules-intro {
+  padding: 90px 0 0;
+}
+
+/* --------------------------------------------------------------------------
+   Shared centered section intro (used by Rule Categories)
+   -------------------------------------------------------------------------- */
+.section-intro {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 60px;
+}
+
+.section-intro .section-title {
+  margin: 18px 0;
+}
+
+.section-intro .section-text {
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Rule Categories
+   -------------------------------------------------------------------------- */
+.rules-categories {
+  padding: 100px 0;
+}
+
+/* --------------------------------------------------------------------------
+   Interactive Split-Panel Rule Selector
+   -------------------------------------------------------------------------- */
+.rules-selector {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  min-height: 420px;
+  border-radius: 26px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* LEFT — list */
+.rules-selector__list {
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.rules-selector__item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 16px 16px;
+  margin-bottom: 4px;
+  border: 1px solid transparent;
+  border-left: 3px solid transparent;
+  border-radius: 14px;
+  background: transparent;
+  color: #d4d4d4;
+  font-family: inherit;
+  font-size: 0.98rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.rules-selector__item:last-child {
+  margin-bottom: 0;
+}
+
+.rules-selector__icon {
+  font-size: 1.3rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.rules-selector__label {
+  flex: 1;
+}
+
+.rules-selector__arrow {
+  color: #8b5cf6;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.rules-selector__item:hover {
+  background: rgba(139, 92, 246, 0.08);
+  color: #ffffff;
+}
+
+.rules-selector__item:hover .rules-selector__icon {
+  transform: scale(1.12);
+}
+
+.rules-selector__item:focus-visible {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+.rules-selector__item.is-active {
+  background: rgba(139, 92, 246, 0.14);
+  border-color: rgba(139, 92, 246, 0.3);
+  border-left-color: #8b5cf6;
+  color: #ffffff;
+  box-shadow: 0 0 24px rgba(139, 92, 246, 0.12);
+  transform: translateX(2px);
+}
+
+.rules-selector__item.is-active .rules-selector__icon {
+  transform: scale(1.12);
+}
+
+.rules-selector__item.is-active .rules-selector__arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* RIGHT — detail panel */
+.rules-selector__panel {
+  position: relative;
+  padding: 56px 56px;
+  display: flex;
+  align-items: center;
+}
+
+.rules-selector__detail {
+  width: 100%;
+}
+
+.rules-selector__detail-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  margin-bottom: 22px;
+  border-radius: 16px;
+  font-size: 1.9rem;
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
+}
+
+.rules-selector__detail h3 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.rules-selector__detail p {
+  max-width: 560px;
+  color: #bdbdbd;
+  line-height: 1.85;
+  font-size: 1.03rem;
+}
+
+/* Entrance animation — fade + slide, replays via JS class toggle */
+.rules-selector__detail.is-active {
+  animation: rulePanelIn 0.45s ease forwards;
+}
+
+@keyframes rulePanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rules-selector__detail.is-active {
+    animation: none;
+  }
+
+  .rules-selector__item,
+  .rules-selector__icon,
+  .rules-selector__arrow {
+    transition: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Moderation
+   -------------------------------------------------------------------------- */
+.rules-moderation {
+  padding: 20px 0 100px;
+}
+
+/* Cursor-following glow on .rules-moderation__card is driven by rules.js,
+   which sets --x/--y on mousemove and reuses the existing
+   `.about__card::before` radial-gradient system from home.css.
+   On touch devices there's no cursor to track, so the glow is disabled
+   outright to avoid a stuck/centered glow flashing on tap. */
+@media (hover: none), (pointer: coarse) {
+  .rules-moderation__card::before {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Final CTA
+   -------------------------------------------------------------------------- */
+.rules-cta {
+  padding: 0 0 120px;
+}
+
+.cta-box {
+  text-align: center;
+  padding: 70px 40px;
+  border-radius: 26px;
+  background: linear-gradient(
+    135deg,
+    rgba(124, 58, 237, 0.18),
+    rgba(255, 255, 255, 0.03)
+  );
+  border: 1px solid rgba(124, 58, 237, 0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.cta-box:hover {
+  transform: translateY(-6px);
+  border-color: rgba(155, 92, 255, 0.4);
+  box-shadow: 0 25px 60px rgba(139, 92, 246, 0.18);
+}
+
+.cta-box h2 {
+  margin: 22px 0;
+  font-size: 2.8rem;
+  color: #fff;
+}
+
+.cta-box p {
+  max-width: 700px;
+  margin: 0 auto 35px;
+  color: #bcbcbc;
+  line-height: 1.8;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive tweaks
+   -------------------------------------------------------------------------- */
+
+/* Tablet — keep two columns, tighten spacing */
+@media (max-width: 900px) {
+  .rules-selector {
+    grid-template-columns: 260px 1fr;
+  }
+
+  .rules-selector__panel {
+    padding: 40px 36px;
+  }
+
+  .rules-selector__item {
+    padding: 14px 12px;
+    font-size: 0.92rem;
+  }
+}
+
+/* Mobile — stack vertically, tap/click driven */
+@media (max-width: 640px) {
+  .rules-hero {
+    padding: 140px 0 80px;
+  }
+
+  .rules-intro {
+    padding: 70px 0 0;
+  }
+
+  .rules-categories {
+    padding: 80px 0;
+  }
+
+  .rules-selector {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .rules-selector__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 16px;
+  }
+
+  .rules-selector__item {
+    width: auto;
+    margin-bottom: 0;
+    padding: 10px 14px;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    border-radius: 999px;
+    font-size: 0.85rem;
+  }
+
+  .rules-selector__item.is-active {
+    border-left-color: transparent;
+    border-bottom-color: #8b5cf6;
+    transform: none;
+  }
+
+  .rules-selector__label {
+    white-space: nowrap;
+  }
+
+  .rules-selector__arrow {
+    display: none;
+  }
+
+  .rules-selector__panel {
+    padding: 32px 24px;
+  }
+
+  .rules-selector__detail h3 {
+    font-size: 1.5rem;
+  }
+
+  .cta-box {
+    padding: 50px 24px;
+  }
+
+  .cta-box h2 {
+    font-size: 2.2rem;
+  }
+}
